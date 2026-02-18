@@ -78,11 +78,10 @@ class GestureGuide:
             
             if is_active:
                 # Draw highlight rectangle
-                rect_margin = 10
                 draw_rounded_rectangle(
                     frame,
-                    (x_center - gesture_width // 2 + rect_margin, self.bar_y + rect_margin),
-                    (x_center + gesture_width // 2 - rect_margin, self.canvas_height - rect_margin),
+                    (x_center - gesture_width // 2 + GESTURE_HIGHLIGHT_MARGIN, self.bar_y + GESTURE_HIGHLIGHT_MARGIN),
+                    (x_center + gesture_width // 2 - GESTURE_HIGHLIGHT_MARGIN, self.canvas_height - GESTURE_HIGHLIGHT_MARGIN),
                     ACTIVE_GESTURE_COLOR,
                     2,
                     radius=8

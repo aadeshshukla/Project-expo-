@@ -26,7 +26,7 @@ class Toolbar:
         # Calculate color swatch positions
         self.color_swatches = {}
         start_x = TOOLBAR_PADDING + COLOR_SWATCH_RADIUS
-        spacing = (canvas_width - 2 * TOOLBAR_PADDING - 400) // len(COLORS)
+        spacing = (canvas_width - 2 * TOOLBAR_PADDING - BUTTON_SECTION_WIDTH) // len(COLORS)
         
         for i, (name, color) in enumerate(COLORS.items()):
             x = start_x + i * spacing

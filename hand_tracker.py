@@ -225,7 +225,7 @@ class HandTracker:
         fingers = []
         
         # Thumb
-        if landmarks[self.THUMB_TIP][0] < landmarks[self.THUMB_IP][0] - 0.05:
+        if landmarks[self.THUMB_TIP][0] < landmarks[self.THUMB_IP][0] - THUMB_DETECTION_THRESHOLD:
             fingers.append(1)
         else:
             fingers.append(0)

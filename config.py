@@ -50,10 +50,12 @@ TOOLBAR_PADDING = 10
 COLOR_SWATCH_RADIUS = 25
 BUTTON_WIDTH = 60
 BUTTON_HEIGHT = 60
+BUTTON_SECTION_WIDTH = 400  # Reserved space for buttons on the right side of toolbar
 
 # Gesture guide bar configuration
 GESTURE_BAR_HEIGHT = 100
 GESTURE_BAR_PADDING = 15
+GESTURE_HIGHLIGHT_MARGIN = 10  # Margin for gesture highlight rectangle
 
 # Hand tracking configuration
 MEDIAPIPE_DETECTION_CONFIDENCE = 0.7
@@ -62,6 +64,7 @@ MAX_NUM_HANDS = 1
 
 # Gesture detection thresholds
 FINGER_TIP_THRESHOLD = 0.1  # Distance threshold for finger being "up"
+THUMB_DETECTION_THRESHOLD = 0.05  # Threshold for thumb lateral movement detection
 GESTURE_SMOOTHING_FRAMES = 3  # Number of frames to smooth gesture detection
 MIN_GESTURE_CONFIDENCE = 0.6
 
