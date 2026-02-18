@@ -129,6 +129,36 @@ You can customize the application by editing `config.py`:
 
 ## 🐛 Troubleshooting
 
+### MediaPipe Installation Issues ⚠️
+
+**Problem**: "Hand tracking is not available" or MediaPipe import errors
+
+**Background**: MediaPipe 0.10+ introduced breaking changes that removed the `solutions` API. This affects compatibility with many hand tracking libraries.
+
+**Solutions**:
+
+**Option 1: Install compatible packages (Recommended)**
+```bash
+pip install opencv-python numpy
+pip install mediapipe cvzone
+```
+Note: This may work but could show warnings due to API changes.
+
+**Option 2: Use Python 3.11 or earlier**
+If you're on Python 3.12+, consider using Python 3.11 where older MediaPipe versions might be available.
+
+**Option 3: Run in Demo Mode**
+The application will run in demo mode without hand tracking if MediaPipe is not available. You can still:
+- Use mouse to click toolbar buttons
+- Test the canvas drawing functionality
+- Use keyboard shortcuts (C for clear, U for undo, R for redo)
+
+**Check your installation**:
+```bash
+python -c "import mediapipe; print(mediapipe.__version__)"
+python -c "from hand_tracker import HandTracker; t = HandTracker()"
+```
+
 ### Camera Not Found
 
 **Problem**: "Failed to open camera" error
@@ -204,6 +234,29 @@ The application features:
 - Small camera preview window in the top-right corner showing hand tracking
 - Bottom gesture guide bar showing available gestures
 - Real-time FPS and status information
+
+## 🚨 Known Issues
+
+### MediaPipe Compatibility
+
+- **MediaPipe 0.10+** removed the `solutions` API that many hand tracking projects depend on
+- The project includes fallback modes to handle this gracefully
+- Hand tracking may not work out-of-the-box depending on your Python version
+- The application can run in demo mode using mouse/keyboard controls if hand tracking is unavailable
+
+### Python Version Compatibility
+
+- Best results with Python 3.8-3.11
+- Python 3.12+ may have limited MediaPipe version options
+- All other features work regardless of Python version
+
+## 💡 Tips for Best Results
+
+- **Lighting**: Ensure good, even lighting for optimal hand detection
+- **Background**: Use a plain, contrasting background behind your hand
+- **Distance**: Keep your hand 1-2 feet from the camera
+- **Gestures**: Make clear, distinct gestures and hold them for a moment
+- **Performance**: Close other applications to ensure smooth 30+ FPS
 
 ---
 
