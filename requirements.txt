@@ -1,3 +1,21 @@
 opencv-python>=4.8.0
-mediapipe>=0.10.0
 numpy>=1.24.0
+
+# NOTE: MediaPipe hand tracking is required but has compatibility issues
+# MediaPipe 0.10+ removed the 'solutions' API that this project was designed for
+# 
+# INSTALLATION OPTIONS:
+# 1. For Python 3.11 or earlier, you can try:
+#    pip install mediapipe==0.9.0.1
+# 
+# 2. For Python 3.12+, mediapipe 0.10+ is required, but it has breaking changes
+#    The project is being updated to support the new API
+# 
+# 3. As a workaround, you can use:
+#    pip install mediapipe cvzone
+#    (May have compatibility issues but sometimes works)
+#
+# For now, install manually based on your Python version:
+# mediapipe>=0.8.0,<0.10.0  # For Python 3.11 and below (if available)
+# mediapipe>=0.10.0          # For Python 3.12+ (requires code updates)
+

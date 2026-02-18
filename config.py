@@ -3,8 +3,6 @@ Configuration constants for Air Canvas application.
 Contains colors, sizes, thresholds, and other configuration parameters.
 """
 
-import numpy as np
-
 # Window configuration
 WINDOW_NAME = "Air Canvas"
 CANVAS_WIDTH = 1280
