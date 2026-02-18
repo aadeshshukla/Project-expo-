@@ -64,11 +64,27 @@
 
 ## 🎯 How to Run
 
+### Full Application (with hand tracking)
+
 Simply run the main application file:
 
 ```bash
 python air_canvas.py
 ```
+
+### Demo Mode (without camera/hand tracking)
+
+If you don't have a camera or want to test the interface, run the demo:
+
+```bash
+python demo.py
+```
+
+The demo allows you to:
+- Draw with your mouse
+- Test all UI features
+- Try undo/redo functionality
+- Explore the color palette
 
 ### Keyboard Shortcuts
 
