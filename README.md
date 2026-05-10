@@ -1,6 +1,7 @@
 # Air Canvas - Draw with Hand Gestures ✋🎨
 
 **Air Canvas** is an interactive drawing application that lets you create art using hand gestures tracked through your webcam. No physical tools needed - just your hand and creativity!
+**NOTE : needed to be tested**
 
 ![Air Canvas Demo](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-Hands-green)
